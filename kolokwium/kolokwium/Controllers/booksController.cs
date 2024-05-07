@@ -30,5 +30,6 @@ public class booksController : ControllerBase
     {
         var id = await _bookRepository.AddNewBookWithAuthor(newBook);
         return Created(Request.Path.Value ?? "api/books", newBook);
+        
     }
 }
